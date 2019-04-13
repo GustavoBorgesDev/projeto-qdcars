@@ -1,0 +1,32 @@
+$c-main: #333333;
+$c-white: #FFFFFF;
+$c-black: #000000;
+$c-main99: #999999;
+
+%d-flex { // @extend %d-flex;
+    display: flex;
+}
+
+%ai-center { // @extend %ai-center;
+    align-items: center;
+}
+
+%jc-center { // @extend %jc-center;
+    justify-content: center;
+}
+
+%fd-column { // @extend %fd-column;
+    flex-direction: column;
+}
+
+%tt-upper { // @extend %tt-upper;
+    text-transform: uppercase;
+}
+
+%ta-center { // %ta-center;
+    text-align: center;
+}
+
+%fw-bold { // @extend %fw-bold;
+    font-weight: bold;
+}

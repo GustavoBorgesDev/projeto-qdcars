@@ -1,0 +1,145 @@
+header {
+    padding-top: 10px;
+    background-color: $c-main;
+    .header-firstbar {
+        .row {
+            > div {
+            }
+            & div:first-child {
+                font-size: 13px;
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 300;
+                color: $c-white;
+                @media (max-width: 768px) {
+                    justify-content: flex-start;
+                }
+            }
+            & div:last-child {
+                @extend %d-flex;
+                justify-content: flex-end;
+                @media (max-width: 768px) {
+                    justify-content: flex-start;
+                }
+                ul {
+                    width: 180px;
+                    @extend %d-flex;
+                    justify-content: space-between;
+                    li {
+                        margin-right: 10px;
+                        a {
+                            font-size: 13px;
+                            font-family: 'Ubuntu';
+                            font-style: normal;
+                            font-weight: 300;
+                            color: $c-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    nav {
+        padding-left: 0 !important;
+        @media (min-width: 768px) {
+            padding-right: 0 !important;
+        }
+        .navbar-toggler {
+            width: 32px;
+            height: 32px;
+            background-image: url(../img/menu.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .navbar-collapse {
+            @media (max-width: 768px) {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            @media (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+            }
+            .navbar-nav {
+                @media (max-width: 768px) { order: 2; }
+                & li:first-child {
+                    a {
+                        @media (min-width: 768px) {
+                            padding-left: 0px !important;
+                        }
+                    }
+                }
+                li {
+                    a {
+                        color: $c-white;
+                        font-size: 13px;
+                        padding-right: 15px !important;
+                        text-transform: uppercase;
+                        background-image: url(../img/seta-baixo.jpg);
+                        background-position: 95% center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            .navbar-brand {
+                @media (max-width: 768px) { order: 0; }
+            }
+            .header-form-blockcar {
+                @extend %d-flex;
+                @extend %ai-center;
+                justify-content: space-between;
+                @media (max-width: 768px) { 
+                    width: 100%;
+                    order: 3; 
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                .form-inline {
+                    @media (max-width: 768px) { order: 1; }
+                    @extend %d-flex;
+                    @extend %fd-column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    input {
+                        color: $c-main99;
+                        font-size: 12px;
+                        padding-left: 0;
+                        padding-bottom: 0;
+                        margin-top: 0 !important;
+                        background-color: transparent;
+                        background-image: url(../img/lupa.jpg);
+                        background-position: 95% bottom;
+                        background-repeat: no-repeat;
+                        border: none;
+                    }
+                    div {
+                        height: 2px;
+                        width: 140px;
+                        background-color: $c-main99;
+                    }
+                }
+                .header-navbar-blockcar {
+                    @media (max-width: 768px) { order: 0; }
+                    @extend %d-flex;
+                    justify-content: flex-end;
+                    width: 125px;
+                    background-image: url(../img/carrinho.jpg);
+                    background-repeat: no-repeat;
+                    ul {
+                        margin-left: 40px;
+                        li {
+                            font-size: 13px;
+                            font-family: 'Ubuntu';
+                            font-style: normal;
+                            font-weight: 300;
+                            color: $c-white;
+                            margin-bottom: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,260 @@
+main {
+    .main-section-gallery {
+        .row {
+            & > div:first-child {
+                @media (min-width: 768px) { margin-bottom: 51px; }
+            }
+            & > div:nth-child(2) {
+                @media (min-width: 768px) { 
+                    padding-right: 5px !important; 
+                    margin-bottom: 22px;
+                }
+            }
+
+            & > div:nth-child(3) {
+                @media (min-width: 768px) { 
+                    padding-left: 5px !important; 
+                    margin-bottom: 22px;
+                }
+            }
+
+            & > div:nth-child(4) {
+                @media (min-width: 768px) { padding-right: 5px !important; }
+            }
+
+            & > div:nth-child(5) {
+                @media (min-width: 768px) { padding-left: 5px !important; }
+                @media (min-width: 768px) { padding-right: 5px !important; }
+            }
+
+            & > div:nth-child(6) {
+                @media (min-width: 768px) { padding-left: 5px !important; }
+            }
+
+            & > div:nth-child(1),
+            & > div:nth-child(2),
+            & > div:nth-child(3),
+            & > div:nth-child(4),
+            & > div:nth-child(5),
+            & > div:nth-child(6) {
+                @media (max-width: 768px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        max-width: 280px;
+                    }
+                }
+            }
+
+            & > div:nth-child(7) {
+                border-top: 2px solid #E4E4E4;
+                padding-top: 30px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                h2 {
+                    font-size: 25px;
+                    @extend %fw-bold;
+                    @extend %ta-center;
+                    @extend %tt-upper;
+                }
+            }
+
+            & > div {
+                @media (max-width: 768px) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .main-blcproduct {
+                @media (max-width: 768px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 35px;
+                }
+                .main-blcproduct-verticalline {
+                    width: 255px;
+                    @extend %d-flex;
+                    @extend %fd-column;
+                    .main-blcproduct-dest {
+                        @extend %d-flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        position: relative;
+                        z-index: 1;
+                        span {
+                            font-size: 12px;
+                            color: $c-white;
+                            @extend %d-flex;
+                            @extend %ai-center;
+                            justify-content: center;
+                            @extend %ta-center;
+                            padding: 10px 15px 10px 30px;
+                            background-position: 13% center;
+                            background-repeat: no-repeat;
+                        }
+                        .main-blcprouct-blackstar {
+                            span {
+                                height: 25px;
+                                background-color: $c-black;
+                                background-image: url(../img/estrela.jpg);
+                            }
+                        }
+                        .main-blcprouct-fret-offer {
+                            @extend %d-flex;
+                            align-items: flex-end;
+                            @extend %fd-column;
+                            & div:first-child {
+                                margin-bottom: 3px;
+                                span {
+                                    height: 25px;
+                                    background-color: #0082a7;
+                                    background-image: url(../img/caminhao.jpg);
+                                }
+                            }
+                            & div:last-child {
+                                span {
+                                    width: 65px;
+                                    height: 25px;
+                                    background-color: #de006f;
+                                    background-image: url(../img/ic-bolinha.jpg);
+                                }
+                            }
+                        }
+                    } // Fim Block Dest
+                    .main-blcproduct-image {
+                        @extend %d-flex;
+                        @extend %jc-center;
+                        @extend %ai-center;
+                        position: relative;
+                        bottom: 10px;
+                        z-index: 0;
+                        margin-bottom: 30px;
+                    }
+                    .main-blcproduct-description {
+                        @extend %d-flex;
+                        @extend %fd-column;
+                        @extend %jc-center;
+                        @extend %ai-center;
+                        .main-blcproduct-span1 {
+                            @extend %ta-center;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 700;
+                            @extend %tt-upper;
+                            margin-bottom: 20px;
+                        }
+                        div {
+                            @extend %d-flex;
+                            @extend %jc-center;
+                            @extend %ai-center;
+                            span {
+                                @extend %ta-center;
+                            }
+                            & span:first-child {
+                                color: $c-main99;
+                                margin-right: 2px;
+                                text-decoration: line-through;
+                            }
+                            & span:last-child {
+                                color: #F8595F;
+                                margin-left: 2px;
+                            }
+                        }
+                        .main-blcproduct-span2 {
+                            color: $c-black;
+                            @extend %ta-center;
+                            margin-bottom: 20px;
+                        }
+                        a {
+                            @extend %d-flex;
+                            @extend %jc-center;
+                            @extend %ai-center;
+                            width: 125px;
+                            height: 30px;
+                            color: #009200;
+                            font-size: 13px;
+                            font-family: 'Lato', sans-serif;
+                            @extend %fw-bold;
+                            padding-left: 15px;
+                            @extend %tt-upper;
+                            background-image: url(../img/ic-comprar.jpg);
+                            background-repeat: no-repeat;
+                            background-position: 7% center;
+                            border: 1px solid #009200;
+                            cursor: pointer;
+                        }
+                    }
+                } // Fim Vertical Align
+            } // Box Product
+
+        } // Fim Row
+    } // Main Gallery
+
+    .main-section-news {
+        margin-top: 45px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: #e4e4e4;
+        .container {
+            .row {
+                & > div:nth-child(1) {
+                    h2 {
+                        color: $c-black;
+                        font-size: 40px;
+                        font-style: normal;
+                        @extend %fw-bold;
+                        @extend %ta-center;
+                        @extend %tt-upper;
+                    }
+                    margin-bottom: 30px;
+                }
+                & > div:nth-child(3) {
+                    h3 {
+                        font-size: 14px;
+                        @extend %tt-upper;
+                        font-family: 'Ubuntu', sans-serif;
+                        color: $c-main;
+                        margin-bottom: 30px;
+                        line-height: 20px;
+                    }
+                    .form-group {
+                        @extend %d-flex;
+                        justify-content: space-between;
+                        margin-top: 25px;
+                        input {
+                            width: 310px;
+                            color: $c-main;
+                            font-size: 13px;
+                            border: none;
+                            outline: none;
+                            padding-left: 50px;
+                            background-color: transparent;
+                            background-image: url(../img/ic-email.jpg);
+                            background-position: 5% center;
+                            background-repeat: no-repeat;
+                            border-radius: 0;
+                            border-bottom: 2px solid $c-main;
+                        }
+                        button {
+                            width: 145px;
+                            height: 40px;
+                            color: $c-white;
+                            font-family: 'Ubuntu', sans-serif;
+                            background-color: $c-main;
+                            outline: none;
+                            border: none;
+                        }
+                    }
+                    ul {
+                        width: 150px;
+                        @extend %d-flex;
+                        justify-content: space-between;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
